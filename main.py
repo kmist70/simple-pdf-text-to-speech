@@ -26,9 +26,10 @@ while read_more_pages:
     text_to_speech.say(text)
     text_to_speech.runAndWait()
     
-    answer = input("Would you like to read more pages? Enter 'YES' to continue: \n")
-    if answer != "YES":
+    answer = input("Would you like to read more pages? Enter 'YES' to continue: ")
+    if answer != "YES" or answer != "yes" or answer != "y" or answer != "Y":
         read_more_pages = False
+    print("\n")
 
 print("Thank you for using Text-To-Speech!\n")
 pdf.close()    # closes the PdfReader object
